@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackPromise } from 'react-promise-tracker';
 
 class Search extends React.Component {
     constructor(props) {
@@ -14,9 +15,10 @@ class Search extends React.Component {
         const KEY = '08068492c90f845955929246b3b293b1';
         const API = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${input}&api_key=${KEY}&format=json`;
         const newAPI = `https://cors-anywhere.herokuapp.com/http://api.deezer.com/search/track/autocomplete?limit=30&q=${input}`;
+        trackPromise(
             fetch(newAPI)
                 .then(response => response.json())
-                .then(data => this.setState({ results: data.data }));
+                .then(data => this.setState({ results: data.data })));
     }
 
     handleActive = () => {
