@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+build
+build-artifacts
+/npm-debug.log
+gitlab-ci-multi-runner
+.vscode
+tmp_linked

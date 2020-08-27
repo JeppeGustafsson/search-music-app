@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/header';
 import Search from './components/search';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       <Header />
 
       <div className="main">
+      <ErrorBoundary>
         <Search />
+        </ErrorBoundary>
       </div>
 
       <footer className="footer">

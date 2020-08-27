@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import Song from './song';
 import { trackPromise } from 'react-promise-tracker';
 
 class Search extends React.Component {
@@ -11,10 +12,9 @@ class Search extends React.Component {
         }
     }
 
-    apiCall = input => {
+    apiCall = (input,increment,limit) => {
         const KEY = '08068492c90f845955929246b3b293b1';
-        const API = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${input}&api_key=${KEY}&format=json`;
-        const newAPI = `https://cors-anywhere.herokuapp.com/http://api.deezer.com/search/track/autocomplete?limit=30&q=${input}`;
+        const newAPI = `https://cors-anywhere.herokuapp.com/http://api.deezer.com/search/track/autocomplete?index=${increment}&limit=${limit}&q=${input}`;
         trackPromise(
             fetch(newAPI)
                 .then(response => response.json())
@@ -35,8 +35,12 @@ class Search extends React.Component {
     }
 
     handleSearch = () => {
-        this.apiCall(this.state.searchValue);
+        this.apiCall(this.state.searchValue,0,20);
         this.setState({ isActive: false });
+    }
+
+    handleIncrement = () => {
+        this.apiCall(this.state.searchValue,0,this.state.results.length + 20);
     }
 
     render() {
@@ -46,10 +50,11 @@ class Search extends React.Component {
                     <h1>Musik för alla</h1>
                     <p>Sök på din favoritlåt eller artist</p>
                  </div>
-                <input placeholder="Search..." value={this.state.searchValue} onChange={event => this.handleChange(event)} type="text"/>
+                <input onenter placeholder="Search..." value={this.state.searchValue} onChange={event => this.handleChange(event)} type="text"/>
                 <button onClick={this.state.isActive === false ? this.handleActive : this.handleSearch} className="search-btn">
                     {this.state.isActive === true ? "Go" : "Search"}
                 </button>
+                {/* <h2 className={this.state.results.length < 1 ? "top-title" : "top-title active"}>Showing results for: {this.state.searchValue}</h2> */}
                  <div className="output">
                   {
                       this.state.results.map(song => {
@@ -68,6 +73,7 @@ class Search extends React.Component {
                               </div>
                       })
                   }
+                  <button onClick={this.handleIncrement} className={this.state.results.length < 1 ? "see-more" : "see-more active"}>See more</button>
                 </div>
             </div>
         )

@@ -57,6 +57,12 @@ h1 {
 h2, h3 {
   margin: 5px 0;
 }
+.top-title.active {
+  opacity: 1;
+}
+.top-title {
+  opacity: 0;
+}
 
 p {
   font-size: 1rem;
@@ -206,12 +212,12 @@ input {
 }
 
 .search-btn {
-  width: 120px;
-  height: 40px;
-  border-radius: 8px;
-  background: linear-gradient(lightcoral, coral);
   border: none;
   outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  width: 120px;
+  background: linear-gradient(lightcoral, coral);
   color: #ffffff;
   margin: 20px 0;
   cursor: pointer;
@@ -255,6 +261,55 @@ input {
   object-fit: cover;
 }
 
+.see-more {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  min-width: 120px;
+  opacity: 0;
+  pointer-events: none;
+  margin: 10px 100%;
+  cursor: pointer;
+}
+.see-more.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .output .song-item {
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .output .song-item img {
+    max-width: 100%;
+  }
+  .output .song-item audio {
+    width: 93%;
+  }
+  .main {
+    min-height: 90vh;
+  }
+  .footer {
+    height: 10vh !important;
+  }
+  .active input {
+    transform: scale(1.1);
+    padding: 15px 0;
+  }
+  .menu-content li {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
 /* FOOTER */
 
 .footer {
@@ -272,6 +327,7 @@ input {
   text-decoration: none;
   list-style-type: none;
   color: #ffffff;
+  padding: 0;
 }
 .footer ul li {
   padding: 0 10px;
