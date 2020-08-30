@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 713 233" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-911.073,-1039.8)">
+        <g transform="matrix(1,0,0,1,110.577,589.46)">
+            <text x="1070.13px" y="678.83px" style="font-family:'Helvetica';font-size:197.913px;fill:white;">Tune</text>
+        </g>
+        <g transform="matrix(0.658128,0,0,0.658941,405.106,432.286)">
+            <ellipse cx="945.175" cy="1098.12" rx="176.377" ry="176.159" style="fill:rgb(243,8,117);"/>
+        </g>
+        <g transform="matrix(0.66754,0,0,0.645552,395.658,441.3)">
+            <ellipse cx="946.002" cy="1106.93" rx="109.302" ry="113.025" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.172971,0,0,0.173185,863.664,965.705)">
+            <ellipse cx="945.175" cy="1098.12" rx="176.377" ry="176.159" style="fill:rgb(243,8,117);"/>
+        </g>
+    </g>
+</svg>

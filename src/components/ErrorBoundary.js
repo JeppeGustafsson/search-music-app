@@ -17,8 +17,7 @@ import React from 'react';
         return (
           <div className="error-view">
                 <h1>Something went wrong...</h1>
-                <p>Try a reload</p>
-                <button onClick={window.reload()} className="search-btn">Reload</button>
+                <button onClick={() => window.location.reload(true)} className="search-btn">Reload</button>
             </div>
         )
       }

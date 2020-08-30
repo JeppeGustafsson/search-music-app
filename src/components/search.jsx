@@ -50,7 +50,7 @@ class Search extends React.Component {
                     <h1>Musik för alla</h1>
                     <p>Sök på din favoritlåt eller artist</p>
                  </div>
-                <input onenter placeholder="Search..." value={this.state.searchValue} onChange={event => this.handleChange(event)} type="text"/>
+                <input placeholder="Search..." value={this.state.searchValue} onChange={event => this.handleChange(event)} type="text"/>
                 <button onClick={this.state.isActive === false ? this.handleActive : this.handleSearch} className="search-btn">
                     {this.state.isActive === true ? "Go" : "Search"}
                 </button>

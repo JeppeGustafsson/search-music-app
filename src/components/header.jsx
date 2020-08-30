@@ -21,7 +21,7 @@ class Header extends React.Component {
         return (
             <div className={this.state.isOpen === true ? "header active" : "header"}>
                 <div className="nav-bar">
-                    <img src="spotify_logo_green.png" alt="spotify-logo"/>
+                    <img src="logo.svg" alt="spotify-logo"/>
                     <div onClick={this.handleOpen} className="burger-btn">
                         <div className="line"></div>
                         <div className="line"></div>

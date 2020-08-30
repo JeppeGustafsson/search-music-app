@@ -12,6 +12,16 @@
   background-image: url('gradient.jpg');
 }
 
+.error-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error-view .search-btn {
+  top: 25px;
+}
+
 .loader {
   display: flex;
   justify-content: center;
@@ -87,7 +97,7 @@ p {
   align-items: center;
 }
 .nav-bar img {
-  max-width: 120px;
+  max-width: 100px;
   margin-left: 15px;
 }
 .nav-bar .burger-btn {
