@@ -10,11 +10,6 @@ import FavouriteList from './components/favouriteList';
 
 function App() {
 
-  const ParallaxBubbles = () => (
-    <Parallax className="parallax-bubble" y={[-20, 20]} tagOuter="figure">
-    </Parallax>
-  )
-
   return (
     <section className="App">
       <Header />
