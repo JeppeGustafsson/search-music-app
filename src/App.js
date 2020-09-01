@@ -1,20 +1,29 @@
 import React from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 import './App.css';
 import Header from './components/header';
 import Search from './components/search';
 import ErrorBoundary from './components/ErrorBoundary';
+import FeaturedSongs from './components/featuredSongs';
+import FavouriteList from './components/favouriteList';
 
 function App() {
+
+  const ParallaxBubbles = () => (
+    <Parallax className="parallax-bubble" y={[-20, 20]} tagOuter="figure">
+    </Parallax>
+  )
+
   return (
     <div className="App">
       <Header />
-
-      <div className="main">
+      <main className="main">
       <ErrorBoundary>
         <Search />
         </ErrorBoundary>
-      </div>
-
+      </main>
+      <FavouriteList />
       <footer className="footer">
         <ul>
           <li>Hemgatan 22</li>

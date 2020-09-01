@@ -19,23 +19,23 @@ class Header extends React.Component {
     render() {
 
         return (
-            <div className={this.state.isOpen === true ? "header active" : "header"}>
-                <div className="nav-bar">
-                    <img src="logo.svg" alt="spotify-logo"/>
+            <header className={this.state.isOpen === true ? "header active" : "header"}>
+                <section className="nav-bar">
+                    <img onClick={() => window.location.reload(true)} src="logo.svg" alt="spotify-logo"/>
                     <div onClick={this.handleOpen} className="burger-btn">
                         <div className="line"></div>
                         <div className="line"></div>
                         <div className="line"></div>
                     </div>
-                </div>
-                <div className="menu-content">
+                </section>
+                <section className="menu-content">
                     <ul>
-                        <li>Home</li>
+                        <li>Profile</li>
                         <li>About</li>
                         <li>Contact</li>
                     </ul>
-                </div>
-            </div>
+                </section>
+            </header>
         )
     }
 }

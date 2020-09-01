@@ -11,7 +11,9 @@
   background-size: cover;
   background-image: url('gradient.jpg');
 }
-
+h1,h2,h3,p,span {
+  user-select: none;
+}
 .error-view {
   display: flex;
   flex-direction: column;
@@ -99,6 +101,7 @@ p {
 .nav-bar img {
   max-width: 100px;
   margin-left: 15px;
+  cursor: pointer;
 }
 .nav-bar .burger-btn {
   height: 20px;
@@ -244,7 +247,6 @@ input {
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   transition: 1s;
 }
@@ -257,6 +259,7 @@ input {
   max-width: 500px;
   display: flex;
   transition: 1s;
+  position: relative;
 }
 .output .song-item .text-box {
   padding: 10px;
@@ -285,6 +288,24 @@ input {
 .see-more.active {
   opacity: 1;
   pointer-events: all;
+}
+
+/* FAVOURITE CHECK */
+
+.favourite-check {
+  width: 20px;
+  height: 20px;
+  background-image: url(heart-unchecked.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.favourite-check.checked {
+  background-image: url(heart-checked.jpg);
 }
 
 @media screen and (max-width: 550px) {

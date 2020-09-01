@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Song from './song';
+import SongItem from './song';
 import { trackPromise } from 'react-promise-tracker';
 
 class Search extends React.Component {
@@ -45,7 +45,7 @@ class Search extends React.Component {
 
     render() {
         return (
-            <div className={this.state.isActive === true ? "search active" : "search"}>
+            <section className={this.state.isActive === true ? "search active" : "search"}>
                 <div className="textContent">
                     <h1>Musik för alla</h1>
                     <p>Sök på din favoritlåt eller artist</p>
@@ -58,24 +58,19 @@ class Search extends React.Component {
                  <div className="output">
                   {
                       this.state.results.map(song => {
-                        return <div className="song-item" key={song.id}>
-                                    <img src={song.album.cover_medium} size="medium" alt="song-image" />
-                                    <div className="text-box">
-                                        <h2>{song.artist.name}</h2>
-                                        <h3>{song.title_short}</h3>
-                                        <p>Rank: {song.rank}</p>
-                                        <audio controls>
-                                            <source src={ 
-                                                song.preview
-                                             } />
-                                        </audio>
-                                    </div>
-                              </div>
+                        return <SongItem 
+                                    key={song.id}
+                                    title={song.artist.name}
+                                    subtitle={song.title_short}
+                                    smallText={song.rank}
+                                    audio={song.preview}
+                                    image={song.album.cover_medium}
+                                />
                       })
                   }
                   <button onClick={this.handleIncrement} className={this.state.results.length < 1 ? "see-more" : "see-more active"}>See more</button>
                 </div>
-            </div>
+            </section>
         )
     }
 }
