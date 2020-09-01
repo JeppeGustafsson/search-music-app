@@ -20,14 +20,14 @@ class Header extends React.Component {
 
         return (
             <header className={this.state.isOpen === true ? "header active" : "header"}>
-                <section className="nav-bar">
+                <nav className="nav-bar">
                     <img onClick={() => window.location.reload(true)} src="logo.svg" alt="spotify-logo"/>
-                    <div onClick={this.handleOpen} className="burger-btn">
+                    <button onClick={this.handleOpen} className="burger-btn">
                         <div className="line"></div>
                         <div className="line"></div>
                         <div className="line"></div>
-                    </div>
-                </section>
+                    </button>
+                </nav>
                 <section className="menu-content">
                     <ul>
                         <li>Profile</li>

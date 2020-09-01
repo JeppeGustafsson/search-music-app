@@ -46,16 +46,16 @@ class Search extends React.Component {
     render() {
         return (
             <section className={this.state.isActive === true ? "search active" : "search"}>
-                <div className="textContent">
+                <article className="textContent">
                     <h1>Musik för alla</h1>
                     <p>Sök på din favoritlåt eller artist</p>
-                 </div>
+                 </article>
                 <input placeholder="Search..." value={this.state.searchValue} onChange={event => this.handleChange(event)} type="text"/>
                 <button onClick={this.state.isActive === false ? this.handleActive : this.handleSearch} className="search-btn">
                     {this.state.isActive === true ? "Go" : "Search"}
                 </button>
                 {/* <h2 className={this.state.results.length < 1 ? "top-title" : "top-title active"}>Showing results for: {this.state.searchValue}</h2> */}
-                 <div className="output">
+                 <section className="output">
                   {
                       this.state.results.map(song => {
                         return <SongItem 
@@ -69,7 +69,7 @@ class Search extends React.Component {
                       })
                   }
                   <button onClick={this.handleIncrement} className={this.state.results.length < 1 ? "see-more" : "see-more active"}>See more</button>
-                </div>
+                </section>
             </section>
         )
     }

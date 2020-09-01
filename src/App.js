@@ -16,14 +16,13 @@ function App() {
   )
 
   return (
-    <div className="App">
+    <section className="App">
       <Header />
-      <main className="main">
+      <section className="main-section">
       <ErrorBoundary>
         <Search />
         </ErrorBoundary>
-      </main>
-      <FavouriteList />
+      </section>
       <footer className="footer">
         <ul>
           <li>Hemgatan 22</li>
@@ -31,7 +30,7 @@ function App() {
           <li>www.minsajt.se</li>
         </ul>
       </footer>
-    </div>
+    </section>
   );
 }
 
