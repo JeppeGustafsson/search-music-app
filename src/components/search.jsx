@@ -47,7 +47,7 @@ class Search extends React.Component {
         return (
             <section className={this.state.isActive === true ? "search active" : "search"}>
                 <article className="textContent">
-                    <h1>Find your song</h1>
+                    <h1>Find your tune</h1>
                     <p>Search for your favourite artist or song</p>
                  </article>
                 <input placeholder="Search..." value={this.state.searchValue} onChange={event => this.handleChange(event)} type="text"/>
