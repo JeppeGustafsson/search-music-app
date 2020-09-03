@@ -337,9 +337,6 @@ input {
   .main {
     min-height: 90vh;
   }
-  .footer {
-    height: 10vh !important;
-  }
   .active input {
     transform: scale(1.1);
     padding: 15px 0;
@@ -351,9 +348,6 @@ input {
   .favourite-check {
     width: 30px;
     height: 30px;
-  }
-  .main-section {
-    height: 90vh;
   }
 }
 
