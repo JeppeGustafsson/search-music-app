@@ -14,22 +14,20 @@ const Song = ({title, subtitle, image, smallText, audio}) => {
     }
 
     return (
-        <article className="song-item">
-        <img src={image} size="medium" alt="song-image" />
-        <article className="text-box">
-            <button onClick={() => handleFavourite()} className={favourite === true ? "favourite-check checked" : "favourite-check"}>
-
-            </button>
-            <h2>{title}</h2>
-            <h3>{subtitle}</h3>
-            <p>Rank: {smallText}</p>
-            <audio controls>
-                <source src={ 
-                    audio
-                 } />
-            </audio>
+        <article className={favourite === true ? "song-item favourite" : "song-item"}>
+            <img src={image} size="medium" alt="song-image" />
+            <article className="text-box">
+                <button onClick={() => handleFavourite()} className="favourite-check"></button>
+                <h2>{title}</h2>
+                <h3>{subtitle}</h3>
+                <p>Rank: {smallText}</p>
+                <audio controls>
+                    <source src={ 
+                        audio
+                    } />
+                </audio>
+            </article>
         </article>
-  </article>
     )
 }
 

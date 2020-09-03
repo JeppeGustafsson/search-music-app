@@ -301,7 +301,7 @@ input {
 .favourite-check {
   width: 20px;
   height: 20px;
-  background-image: url(heart-unchecked.jpg);
+  background-image: url(heart-unchecked.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -311,9 +311,10 @@ input {
   cursor: pointer;
   border: none;
   outline: none;
+  background-color: transparent;
 }
-.favourite-check.checked {
-  background-image: url(heart-checked.jpg);
+.favourite .favourite-check {
+  background-image: url(heart-checked.svg);
 }
 
 @media screen and (max-width: 550px) {
@@ -346,6 +347,13 @@ input {
   .menu-content li {
     text-align: center;
     font-size: 1.5rem;
+  }
+  .favourite-check {
+    width: 30px;
+    height: 30px;
+  }
+  .main-section {
+    height: 90vh;
   }
 }
 
